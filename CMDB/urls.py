@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from index.views import index,login_view,logout,error
+from django.conf.urls import handler404,handler500
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-	url(r'^hostinfo/', include('hostinfo.urls')),
+	url(r'^$',index),
+	url(r'^index/',index),
+	url(r'^index.html$',index),
+	url(r'^login.html$',login_view),
+	url(r'^login/',login_view),
+	url(r'^logout.html',logout),
+	url(r'^error.html$',error),
+	url(r'^host/', include('hostinfo.urls')),
 ]

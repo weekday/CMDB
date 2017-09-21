@@ -1,8 +1,8 @@
 #coding:utf-8
 
-from django.conf.urls import include, url
-from views import *
+from django.conf.urls import url
+from views import host
 
 urlpatterns = [
-    url(r'^/', include()),
+    url(r'^host.html$',host,name='host'),
 ]
