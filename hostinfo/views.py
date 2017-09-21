@@ -14,6 +14,7 @@ def host(request):
 def host_add(request):  #添加主机
 	ret = {'status':True,'error':None,'data':None}
 	if request.method == 'POST':
-		try:
-			ip = request.POST.get('ip',None)
-			port =
+		pass
+		# try:
+		# 	ip = request.POST.get('ip',None)
+		# 	pass
